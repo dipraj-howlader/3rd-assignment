@@ -1,10 +1,9 @@
-//
+// https://github.com/dipraj-howlader/3rd-assignment
 
 //First Problem
 function kilometerToMeter(kilometer) {
     if (kilometer < 0) {
-        console.log("This kinda parameter can never be negative");
-        return 0;
+        return "Error!";
     }
     else {
         var meter = kilometer * 1000;
@@ -12,15 +11,14 @@ function kilometerToMeter(kilometer) {
     }
 
 }
-var result = kilometerToMeter(12.5);
+var result = kilometerToMeter(-2);
 console.log(result);
 
 
 //Second Problem
 function budgetCalculator(clock, phone, laptop) {
     if (clock < 0 || phone < 0 || laptop < 0) {
-        console.log("This kinda parameters can never be negative")
-        return 0;
+        return "Error!";
     }
     else {
         var clockPrice = clock * 50;
@@ -30,7 +28,7 @@ function budgetCalculator(clock, phone, laptop) {
         return totalPrice;
     }
 }
-var result = budgetCalculator(2, 10.5, 0);
+var result = budgetCalculator(2, 2, 5);
 console.log(result);
 
 
@@ -38,8 +36,7 @@ console.log(result);
 // Third Problem
 function hotelCost(daysToStay) {
     if (daysToStay < 0) {
-        console.log("This kinda parameter can never be negative");
-        return 0;
+        return "Error!";
     }
     else if (daysToStay >= 0 && daysToStay <= 10) {
         var firstPartPrice = daysToStay * 100;
@@ -53,6 +50,7 @@ function hotelCost(daysToStay) {
         return totalPrice;
     }
     else {
+        // here for 21 to infinity
         var daysRemaining = daysToStay - 20;
         var firstPartPrice = 100 * 10;
         var secondPartPrice = 80 * 10;
@@ -61,7 +59,7 @@ function hotelCost(daysToStay) {
         return totalPrice;
     }
 }
-var result = hotelCost(45);
+var result = hotelCost(-5);
 console.log(result);
 
 
@@ -70,7 +68,7 @@ console.log(result);
 //Fourth Problem
 function megaFriend(friendsName) {
     if (friendsName.length == 0) {
-        console.log("Error!");
+        return "Error!";
 
     }
     else {
@@ -84,6 +82,6 @@ function megaFriend(friendsName) {
         return largest;
     }
 }
-var friendsList = ["Moina", "Koinaa", "Shoynaa", "Toyniaaa", "Deonah", "Poinaa"];
-var result = megaFriend(friendsList);
+var friendList = ["Moina", "Koinaa", "Shoynaa", "Toyniaaa", "Deonah", "Poinaa"];
+var result = megaFriend(friendList);
 console.log(result);
